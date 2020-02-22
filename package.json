@@ -2,12 +2,20 @@
 	"name": "{{pkg}}",
 	"version": "1.0.0",
 	"description": "{{description}}",
-	"main": "{{pkg}}.js",
-	"type": "module",
+	"bin": {
+		"{{pkg}}": "cli/cli.js"
+	},
 	"scripts": {
-		"build": "cli/cli.js -d dist",
 		"test": "echo 'No tests provided'"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/{{ghAuthor}}/{{ghRepoName}}.git"
+	},
+	"bugs": {
+		"url": "https://github.com/{{ghAuthor}}/{{ghRepoName}}/issues"
+	},
+	"homepage": "https://github.com/{{ghAuthor}}/{{ghRepoName}}#readme",
 	"keywords": [
 		"javascript",
 		"node.js",
@@ -16,17 +24,9 @@
 	],
 	"author": "Cassandra Spruit",
 	"license": "GPL-3.0-or-later",
-	"bin": {
-		"{{pkg}}": "cli/cli.js"
-	},
 	"dependencies": {
 		"chalk": "^3.0.0",
 		"meow": "^6.0.1"
-	},
-	"devDependencies": {
-		"@babel/cli": "^7.8.3",
-		"@babel/core": "^7.8.3",
-		"@babel/preset-env": "^7.8.3"
 	},
 	"vulcan": {
 		"name": "cli-utility",
@@ -40,10 +40,13 @@
 			},
 			"description": "Package description",
 			"name": "Display name of package",
-			"urlName": {
-				"description": "URL name of package repo",
+			"npmAuthor": "NPM package author",
+			"ghRepoName": {
+				"description": "GitHub repo name",
 				"required": true
-			}
+			},
+			"ghAuthor": "GitHub repo owner"
+
 		}
 	}
 }
