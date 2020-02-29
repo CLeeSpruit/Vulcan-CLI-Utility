@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const meow = require('meow');
+const pkg = require('{{pkg}}.js');
 
 const cli = meow(`
 	Usage
@@ -13,4 +14,4 @@ const cli = meow(`
 		-- Generates with all debug text
 `);
 
-cli.showHelp();
+pkg(cli);

@@ -21,7 +21,7 @@ This is a [Vulcan](https://github.com/CassandraSpruit/Vulcan) template to make b
 [![license](https://img.shields.io/github/license/{{ghAuthor}}/{{ghRepoName}})](https://github.com/{{ghAuthor}}/{{ghRepoName}}/blob/master/LICENSE)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
 
-# {{displayName}}
+# {{name}}
 
 {{description}}
 
